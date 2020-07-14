@@ -1,2 +1,2 @@
 # algorithms
-HeapSort, QuickSort alghorithms.
+HeapSort, QuickSort, BinarySearch alghorithms.
