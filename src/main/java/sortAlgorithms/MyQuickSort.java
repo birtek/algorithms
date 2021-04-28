@@ -29,14 +29,14 @@ public class MyQuickSort {
         int j = right;
         int pivot = array[(left + right) / 2]; // you can also use as a pivot first element of array(@parm left)
                                                // or last element of array(@prma right)
-        while (i <= j) {
+        while (i <=j) {
             while (array[i] < pivot) {
                 i++;
             }
             while (array[j] > pivot) {
                 j--;
             }
-            if (i <= j) {
+            if (i <=j) {
                 swap(i, j);
                 i++;
                 j--;
