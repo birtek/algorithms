@@ -1,8 +1,14 @@
+import othrerAlghoritms.Fibbonacci;
+import othrerAlghoritms.FooBar;
+import othrerAlghoritms.Prime;
 import sortAlgorithms.ArithmeticString;
 import sortAlgorithms.BinarySearch;
 import sortAlgorithms.HeapSort;
 import sortAlgorithms.MyQuickSort;
 import sortAlgorithms.AlgorithmUtils.SortUtils;
+
+import java.util.Arrays;
+import java.util.List;
 
 
 public class Run {
@@ -32,6 +38,10 @@ public class Run {
         HeapSort.sort(array4);
         System.out.println("Heap Sort");
         SortUtils.printTable(array4);
-        }
+
+        FooBar.foobar4(18);
+
+
+    }
     }
 
