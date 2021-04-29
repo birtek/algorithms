@@ -11,18 +11,18 @@ public class SelectSort {
     private static void selectSort(int[] arrayToSort) {
         int n = arrayToSort.length - 1;
         int it = 0;
-        int minIndex = 0;
+        int minValueIndex = 0;
 
         while (it < n) {
             int min = arrayToSort[it];
             for (int i = it; i <= n; i++) {
                 if (min > arrayToSort[i]) {
                     min = arrayToSort[i];
-                    minIndex = i;
+                    minValueIndex = i;
                 }
             }
-            if(minIndex != it){
-                SortUtils.swap(arrayToSort, it, minIndex);
+            if(minValueIndex != it){
+                SortUtils.swap(arrayToSort, it, minValueIndex);
             }
             it++;
         }
