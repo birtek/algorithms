@@ -11,7 +11,7 @@ public class Run {
         long end;
 
         ArrayGenerator arrayGenerator = new ArrayGenerator();
-        int[] primeArray = arrayGenerator.arrayGenerator(100000);
+        int[] primeArray = arrayGenerator.arrayGenerator(10);
         System.out.println("Unsorted array");
         System.out.println(Arrays.toString(primeArray));
 
