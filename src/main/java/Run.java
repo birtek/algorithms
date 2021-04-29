@@ -1,47 +1,59 @@
 import sortAlgorithms.*;
 import sortAlgorithms.AlgorithmUtils.ArrayGenerator;
-import sortAlgorithms.AlgorithmUtils.SortUtils;
 
+import java.time.Clock;
+import java.time.LocalTime;
 import java.util.Arrays;
 
 
 public class Run {
     public static void main(String[] args) {
+        long start;
+        long end;
 
         ArrayGenerator arrayGenerator = new ArrayGenerator();
-        int[] array = arrayGenerator.arrayGenerator(100);
-        System.out.println(Arrays.toString(array));
-        //int[] array=new int[]{5,5,6,2,8,12,5,66,2,41,31,4677,0,33,55,667,876,-22};
+        int[] primeArray = arrayGenerator.arrayGenerator(99000000);
 
-        //MyQuickSort quicksort = new MyQuickSort();
-        // System.out.println("Quicksort:");
-        //quicksort.sort(array);
-        //SortUtils.printTable(array);
+        int[] array = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("Unsorted array");
+        // System.out.println(Arrays.toString(array));
+
+        FirstImplementationQuickSort quicksort = new FirstImplementationQuickSort();
+        System.out.println("Quicksort:");
+        start = System.currentTimeMillis();
+        quicksort.sort(array);
+        end = System.currentTimeMillis() - start;
+
+        // System.out.println(Arrays.toString(array));
+        System.out.println("Time required to sort array by QuickSort with pivot in middle: " + end + "ms");
 
 
-        int[] array2 = new int[]{};
-        int arithmeticStringSum = ArithmeticString.sum(array2);
+        int[] array2 = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("Quicksort:");
+        start = System.currentTimeMillis();
+      //  QuickSortWithBorder.sort(array);
+        end = System.currentTimeMillis() - start;
 
-        System.out.println("Sum of Arithmetic String: ");
-        System.out.println(arithmeticStringSum);
+        //  System.out.println(Arrays.toString(array));
+        System.out.println("Time required to sort array by QuickSort with pivot at the end: " + end + "ms");
 
-        int[] array3 = new int[]{};
-        int number = 2;
+        int[] array3 = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("Heap Sort");
+        start = System.currentTimeMillis();
+        HeapSort.sort(array3);
+        end = System.currentTimeMillis() - start;
 
-        //   quicksort.sort(array3);
-        System.out.println("Is number " + number + " is in table?");
-        System.out.println(BinarySearch.binarySearch(array3, number));
+        //  System.out.println(Arrays.toString(array));
+        System.out.println("Time required to sort array by HeapSort : " + end + "ms");
 
-        int[] array4 = new int[]{5, 5, 6, 2, 8, 12, 5, 66, 2, 41, 31, 4677, 0, 33, 55, 667, 876, -22, -1000};
-//        HeapSort.sort(array4);
-//        System.out.println("Heap Sort");
-//        SortUtils.printTable(array4);
-//        QuickSortWithBorder.sort(array4);
-//        System.out.println("Quick sort with Border");
-//        System.out.println(Arrays.toString(array4));
-        System.out.println("Quick sort with Bubble");
-        BubbleSort.sort(array4);
-        System.out.println(Arrays.toString(array4));
+        int[] array4 = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("BubbleSort");
+        start = System.currentTimeMillis();
+        HeapSort.sort(array4);
+        end = System.currentTimeMillis() - start;
+
+        //  System.out.println(Arrays.toString(array));
+        System.out.println("Time required to sort array by BubbleSort: " + end + "ms");
     }
 }
 

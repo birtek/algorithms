@@ -7,7 +7,7 @@ public class ArrayGenerator {
         int array[] = new int[x];
         Random random = new Random(7);
         for (int i = 0; i < x; i++) {
-            array[i] = random.nextInt(400)-200;
+            array[i] = random.nextInt(401)-200;
         }
         return array;
     }

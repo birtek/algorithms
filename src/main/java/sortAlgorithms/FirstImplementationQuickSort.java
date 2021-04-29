@@ -1,7 +1,7 @@
 package sortAlgorithms;
 
 //none recursive example https://javarevisited.blogspot.com/2016/09/iterative-quicksort-example-in-java-without-recursion.html
-public class MyQuickSort {
+public class FirstImplementationQuickSort {
 
     private int array[];
 
