@@ -10,21 +10,19 @@ public class BubbleSort {
     }
 
     private static void bubbleSort(int[] arrayToSort) {
-        boolean isSwapDoes;
+        boolean isSwapped = true;
+        int it = 0;
 
         int n = arrayToSort.length - 1;  //numbers of iteration
-        for (int i = 0; i < n; i++) {
-            isSwapDoes = false;
-            for (int j = 0; j < n; j++) {
+        while (it < n && isSwapped) {
+            isSwapped = false;
+            for (int j = 0; j < n - it; j++) {
                 if (arrayToSort[j] > arrayToSort[j + 1]) {
                     SortUtils.swap(arrayToSort, j, j + 1);
-                    isSwapDoes = true;
+                    isSwapped = true;
                 }
             }
-            n--;
-            if (!isSwapDoes){
-                return;
-            }
+            it++;
         }
     }
 }
