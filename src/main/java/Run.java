@@ -53,6 +53,14 @@ public class Run {
         end = System.currentTimeMillis() - start;
         System.out.println(Arrays.toString(array4));
         System.out.println("Time required to sort array by BubbleSort: " + end + "ms");
+
+        int[] array5 = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("BubbleSort");
+        start = System.currentTimeMillis();
+        BubbleSort.sort(array5);
+        end = System.currentTimeMillis() - start;
+        System.out.println(Arrays.toString(array5));
+        System.out.println("Time required to sort array by BubbleSort: " + end + "ms");
     }
 }
 
