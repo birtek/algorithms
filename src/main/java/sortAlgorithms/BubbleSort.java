@@ -4,7 +4,7 @@ import sortAlgorithms.AlgorithmUtils.SortUtils;
 
 public class BubbleSort {
 
-    public static void sort(int arrayToSort[]) {
+    public static void sort(int[] arrayToSort) {
 
         bubbleSort(arrayToSort);
     }
