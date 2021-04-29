@@ -11,7 +11,7 @@ public class Run {
         long end;
 
         ArrayGenerator arrayGenerator = new ArrayGenerator();
-        int[] primeArray = arrayGenerator.arrayGenerator(100);
+        int[] primeArray = arrayGenerator.arrayGenerator(100000);
         System.out.println("Unsorted array");
         System.out.println(Arrays.toString(primeArray));
 
@@ -54,12 +54,12 @@ public class Run {
         System.out.println("Time required to sort array by BubbleSort: " + end + "ms");
 
         int[] array5 = Arrays.copyOf(primeArray, primeArray.length);
-        System.out.println("BubbleSort");
+        System.out.println("SelectSort");
         start = System.currentTimeMillis();
-        BubbleSort.sort(array5);
+        SelectSort.sort(array5);
         end = System.currentTimeMillis() - start;
         System.out.println(Arrays.toString(array5));
-        System.out.println("Time required to sort array by BubbleSort: " + end + "ms");
+        System.out.println("Time required to sort array by SelectSort: " + end + "ms");
     }
 }
 
