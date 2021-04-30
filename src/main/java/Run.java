@@ -60,6 +60,14 @@ public class Run {
         end = System.currentTimeMillis() - start;
         System.out.println(Arrays.toString(array5));
         System.out.println("Time required to sort array by SelectSort: " + end + "ms");
+
+        int[] array6 = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("InsertiontSort");
+        start = System.currentTimeMillis();
+        InsertionSort.sort(array6);
+        end = System.currentTimeMillis() - start;
+        System.out.println(Arrays.toString(array6));
+        System.out.println("Time required to sort array by InsertionSort: " + end + "ms");
     }
 }
 

@@ -13,9 +13,9 @@ public class SelectSort {
         int it = 0;
         int minValueIndex = 0;
 
-        while (it <=n) {
+        while (it <n) {
             int minValueStart = arrayToSort[it];
-            for (int i = it + 1; i < n; i++) {
+            for (int i = it + 1; i <= n; i++) {
                 if (minValueStart > arrayToSort[i]) {
                     minValueStart = arrayToSort[i];
                     minValueIndex = i;
