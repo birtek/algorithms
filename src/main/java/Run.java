@@ -11,7 +11,7 @@ public class Run {
         long end;
 
         ArrayGenerator arrayGenerator = new ArrayGenerator();
-        int[] primeArray = arrayGenerator.arrayGenerator(10);
+        int[] primeArray = arrayGenerator.arrayGenerator(100000);
         System.out.println("Unsorted array");
         System.out.println(Arrays.toString(primeArray));
 
@@ -62,12 +62,20 @@ public class Run {
         System.out.println("Time required to sort array by SelectSort: " + end + "ms");
 
         int[] array6 = Arrays.copyOf(primeArray, primeArray.length);
-        System.out.println("InsertiontSort");
+        System.out.println("InsertSort");
         start = System.currentTimeMillis();
         InsertionSort.sort(array6);
         end = System.currentTimeMillis() - start;
         System.out.println(Arrays.toString(array6));
         System.out.println("Time required to sort array by InsertionSort: " + end + "ms");
+
+        int[] array7 = Arrays.copyOf(primeArray, primeArray.length);
+        System.out.println("MergeSort");
+        start = System.currentTimeMillis();
+        MergeSort.sort(array7);
+        end = System.currentTimeMillis() - start;
+        System.out.println(Arrays.toString(array7));
+        System.out.println("Time required to sort array by MergeSort: " + end + "ms");
     }
 }
 
