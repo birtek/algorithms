@@ -10,7 +10,7 @@ public class ShellSort {
         int n = arrayToSort.length - 1;
         int it = 1;
         Integer[] distances = distanceGenerator.apply(n);
-        int distance = distances[distances.length - 1];
+        int distance = distances[distances.length];
         int current, otherIndex;
         while (distance >= 1) {
             for (int i = distance; i < n; i++) {
